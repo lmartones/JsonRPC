@@ -152,6 +152,17 @@ class Server
     }
 
     /**
+     * Add custom header to send
+     * 
+     * @access public
+     * @param string $name header name
+	 * @param string $value header value
+     */
+    public function addCustomHeader($name, $value){
+    	$this->responseBuilder->withHeader($name, $value);
+    }
+
+    /**
      * Define alternative authentication header
      *
      * @access public
